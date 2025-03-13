@@ -15,9 +15,9 @@ pipeline {
                 sh 'g++ main/new.cpp -o output'
             }
         }
-        stage('Test') {
+       stage('Test') {
             steps {
-                sh './output'
+                sh './wrong_output'  // This file does not exist!
             }
         }
         stage('Deploy') {
