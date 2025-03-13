@@ -17,7 +17,7 @@ pipeline {
         }
        stage('Test') {
             steps {
-                sh './wrong_output'  // This file does not exist!
+                sh './output'
             }
         }
         stage('Deploy') {
